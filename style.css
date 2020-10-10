@@ -27,23 +27,22 @@ canvas {
 }
 
 .banner-img {
-  width: 63%;
+  width: 68%;
 }
 
 .cta-wrapper {
-  display: flex;
+  display: none;
   justify-content: space-around;
   align-items: center;
   background-color: #d51b28;
-  border: 3px solid var(--highlight-color);
   color: #ffffff;
   font-weight: bolder;
   letter-spacing: 2px;
   overflow: hidden;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem;
   position: absolute;
-  right: 20%;
-  top: 45%;
+  right: 25%;
+  top: 40%;
   text-transform: uppercase;
   transition: 0.5s;
 }
@@ -56,6 +55,7 @@ canvas {
 .cta {
   color: #ffffff;
   font-size: 1.3rem;
+  margin: 0.5rem;
   text-decoration: none;
 }
 
