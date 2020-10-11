@@ -5,9 +5,9 @@ let tl = gsap.timeline();
  */
 
  // Animations
-tl.to('.banner-img', { duration: 5, scale: 0.5 }) // shrinking the title down with the scale method
-tl.fromTo('.logo', { x: 0, opacity: 0 }, { duration: 1.6, x: 10, opacity: 1, ease: "expo.in"}, 5) // Logo ease in from the left to opacity full absolute position of 5seconds
+tl.fromTo('.banner-img', {opacity: 0, scale: 1}, { duration: 3, opacity: 1,  scale: 0.5 }) // shrinking the title down with the scale method
 tl.fromTo('.cta', { x: 0, opacity: 0 }, { duration: 1.2, x: 140, opacity: 1, ease: "expo.in" }, '-=0.5') // cta come in from the left relative position half second after previous tween starts
+tl.fromTo('.logo', { x: 0, opacity: 0 }, { duration: 1.6, x: 10, opacity: 1, ease: "expo.in"}, 5) // Logo ease in from the left to opacity full absolute position of 5seconds
 
 /**
  * NOTE: Fireworks animation is Canvas Fireworks by Pascal Mathis  https://codepen.io/ppmathis/pen/LGfHJ.
