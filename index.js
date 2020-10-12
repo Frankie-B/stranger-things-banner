@@ -5,9 +5,13 @@ let tl = gsap.timeline();
  */
 
  // Animations
+window.onload = tl.to('.preloader', { duration: 1, rotate: 360, repeat: 0.4 }) // spinning preloader 
+tl.fromTo('.loader-wrapper', {opacity: 1}, {duration: 0.4, opacity: 0}, '-=0.1') // preloader fade out animation
 tl.fromTo('.banner-img', {opacity: 0, scale: 1}, { duration: 3, opacity: 1,  scale: 0.5 }) // shrinking the title down with the scale method
-tl.fromTo('.cta', { x: 0, opacity: 0 }, { duration: 1.2, x: 140, opacity: 1, ease: "expo.in" }, '-=0.5') // cta come in from the left relative position half second after previous tween starts
-tl.fromTo('.logo', { x: 0, opacity: 0 }, { duration: 1.6, x: 10, opacity: 1, ease: "expo.in"}, 5) // Logo ease in from the left to opacity full absolute position of 5seconds
+tl.fromTo('.cta', { x: 0, opacity: 0 }, { duration: 1.5, ease: "expo.out", x: 140, opacity: 1 }, '-=0.5') // cta come in from the left relative position half second after previous tween starts
+tl.fromTo('.logo-1', { opacity: 0 }, { duration: 0.3, opacity: 1, ease: "expo.in"}, '<') // First part of the Netflix logo
+tl.fromTo('.logo-2', { x: -150, opacity: 0 }, {  duration: 1.7, ease: "power3.out", x: 2, opacity: 1}, ) // Opacity change for Netflix logo part 2
+tl.fromTo('.logo-2', {  opacity: 0 }, { duration: 1.3, ease: "sine.out", opacity: 1 }, '<') // Chained  ease in from the left to opacity full absolute position of 5seconds
 
 /**
  * NOTE: Fireworks animation is Canvas Fireworks by Pascal Mathis  https://codepen.io/ppmathis/pen/LGfHJ.
@@ -200,7 +204,7 @@ Particle.prototype.draw = function() {
 
 // Create a bunch of particles at the given position
 function createParticles(x, y) {
-  var particleCount = 300;
+  var particleCount = 400;
   while(particleCount--) {
     particles.push(new Particle(x, y));
   }
